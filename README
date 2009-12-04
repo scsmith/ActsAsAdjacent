@@ -3,8 +3,18 @@ ActsAsAdjacent
 
 Simple rails plugin for adding the ability to get the next and previous activerecord objects. Scopes can also be defined as this makes use of named scopes under the hood.
 
+in item.rb
+acts_as_adjacent
+
+in controllers
 @item = Item.find(5)
-@item.next #=> 
-@item.previous #=> 
+Item.next(5)
+Item.previous(5)
+
+You can also work directly on an instance
+@item.next
+@item.previous
+
+This makes use of an offset relative to the record that is passed so it will work even if records are not sequential. So if records 1,2,4,5 are present 2.next will return 4
 
 Copyright (c) 2009 Steve Smith, released under the MIT license
