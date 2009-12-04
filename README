@@ -1,0 +1,10 @@
+ActsAsAdjacent
+==============
+
+Simple rails plugin for adding the ability to get the next and previous activerecord objects. Scopes can also be defined as this makes use of named scopes under the hood.
+
+@item = Item.find(5)
+@item.next #=> 
+@item.previous #=> 
+
+Copyright (c) 2009 Steve Smith, released under the MIT license
